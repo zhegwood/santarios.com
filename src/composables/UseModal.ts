@@ -6,7 +6,7 @@ export interface MediaAsset {
   smallHeight?: string
 }
 
-export function useModal(assets: typeof ref<MediaAsset[] | null>) {
+export function useModal(assets: typeof ref<MediaAsset[]> | null) {
   const modalAsset = ref<MediaAsset | null>(null)
 
   const currentIdx = computed((): number => {

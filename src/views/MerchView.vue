@@ -66,6 +66,10 @@ const stickers = ref<MediaAsset[]>([
     alt: 'Angel Procreate',
   },
   {
+    src: new URL('@/assets/images/merch/sticker07.png', import.meta.url).href,
+    alt: 'Turquoise Torus 2',
+  },
+  {
     src: new URL('@/assets/images/merch/sticker06.jpg', import.meta.url).href,
     alt: 'Stacked Purple with Tag White Background',
   },
