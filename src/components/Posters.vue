@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import type { MediaAsset } from '@/composables/UseModal'
 
 const emit = defineEmits(['show-modal'])
 
@@ -22,7 +23,7 @@ const posters = ref<MediaAsset[]>([
   },
 ])
 
-const showModal = (p) => {
+const showModal = (p: MediaAsset) => {
   emit('show-modal', p)
 }
 </script>
