@@ -58,11 +58,6 @@ const expanded = ref(false)
         </RouterLink>
       </li>
       <li>
-        <RouterLink :to="{ name: 'videos' }" class="block text-lg" @click="expanded = false">
-          Videos
-        </RouterLink>
-      </li>
-      <li>
         <RouterLink :to="{ name: 'epk' }" class="block text-lg" @click="expanded = false">
           EPK
         </RouterLink>
@@ -102,11 +97,6 @@ const expanded = ref(false)
         <li>
           <RouterLink :to="{ name: 'photos' }" class="hover:underline focus:underline">
             Photos
-          </RouterLink>
-        </li>
-        <li>
-          <RouterLink :to="{ name: 'videos' }" class="hover:underline focus:underline">
-            Videos
           </RouterLink>
         </li>
         <li>

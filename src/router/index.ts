@@ -26,11 +26,6 @@ const router = createRouter({
       component: () => import('@/views/PhotosView.vue'),
     },
     {
-      path: '/videos',
-      name: 'videos',
-      component: () => import('@/views/VideosView.vue'),
-    },
-    {
       path: '/epk',
       name: 'epk',
       component: () => import('@/views/EPKView.vue'),
