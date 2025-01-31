@@ -53,11 +53,6 @@ const expanded = ref(false)
         </RouterLink>
       </li>
       <li>
-        <RouterLink :to="{ name: 'bio' }" class="block text-lg" @click="expanded = false">
-          Bio
-        </RouterLink>
-      </li>
-      <li>
         <RouterLink :to="{ name: 'photos' }" class="block text-lg" @click="expanded = false">
           Photos
         </RouterLink>
@@ -68,12 +63,8 @@ const expanded = ref(false)
         </RouterLink>
       </li>
       <li>
-        <RouterLink
-          :to="{ name: 'tech-and-rider' }"
-          class="block text-lg"
-          @click="expanded = false"
-        >
-          Tech and Riders
+        <RouterLink :to="{ name: 'epk' }" class="block text-lg" @click="expanded = false">
+          EPK
         </RouterLink>
       </li>
       <!--
@@ -109,11 +100,6 @@ const expanded = ref(false)
           </RouterLink>
         </li>
         <li>
-          <RouterLink :to="{ name: 'bio' }" class="hover:underline focus:underline">
-            Bio
-          </RouterLink>
-        </li>
-        <li>
           <RouterLink :to="{ name: 'photos' }" class="hover:underline focus:underline">
             Photos
           </RouterLink>
@@ -124,8 +110,8 @@ const expanded = ref(false)
           </RouterLink>
         </li>
         <li>
-          <RouterLink :to="{ name: 'tech-and-rider' }" class="hover:underline focus:underline">
-            Tech and Riders
+          <RouterLink :to="{ name: 'epk' }" class="hover:underline focus:underline">
+            EPK
           </RouterLink>
         </li>
         <!--

@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import type { MediaAsset } from '@/composables/UseModal'
 import { useModal } from '@/composables/UseModal'
 import Modal from '@/components/lib/Modal.vue'
+import Posters from '@/components/Posters.vue'
 
 const { showModal, hideModal, modalAsset } = useModal(null)
 
@@ -22,25 +23,6 @@ const images = ref<MediaAsset[]>([
   {
     src: new URL('@/assets/images/merch/t-shirt04.jpg', import.meta.url).href,
     alt: 'Gray with Turquoise Angel',
-  },
-])
-
-const posters = ref<MediaAsset[]>([
-  {
-    src: new URL('@/assets/images/merch/poster01.jpg', import.meta.url).href,
-    alt: 'Blank Angel on Guitar',
-  },
-  {
-    src: new URL('@/assets/images/merch/poster02.jpg', import.meta.url).href,
-    alt: 'Black Tan Poster Small',
-  },
-  {
-    src: new URL('@/assets/images/merch/poster03.png', import.meta.url).href,
-    alt: 'Tourquoise Torus on Black',
-  },
-  {
-    src: new URL('@/assets/images/merch/poster04.jpg', import.meta.url).href,
-    alt: 'Blank Turquoise Poster',
   },
 ])
 
@@ -86,12 +68,7 @@ const stickers = ref<MediaAsset[]>([
         <img :src="img.src" :alt="img.alt" class="h-full border rounded max-h-52" />
       </button>
     </div>
-    <h3>Posters</h3>
-    <div class="flex flex-wrap gap-4 mb-4">
-      <button v-for="p in posters" :key="p.src" @click="showModal(p)">
-        <img :src="p.src" :alt="p.alt" class="h-full border rounded max-h-52" />
-      </button>
-    </div>
+    <Posters class="mb-4" @show-modal="showModal" />
     <h3>Stickers</h3>
     <div class="flex flex-wrap gap-4 mb-4">
       <button v-for="s in stickers" :key="s.src" @click="showModal(s)">

@@ -21,11 +21,6 @@ const router = createRouter({
       component: () => import('@/views/MerchView.vue'),
     },
     {
-      path: '/bio',
-      name: 'bio',
-      component: () => import('@/views/BioView.vue'),
-    },
-    {
       path: '/photos',
       name: 'photos',
       component: () => import('@/views/PhotosView.vue'),
@@ -36,9 +31,9 @@ const router = createRouter({
       component: () => import('@/views/VideosView.vue'),
     },
     {
-      path: '/tech-and-rider',
-      name: 'tech-and-rider',
-      component: () => import('@/views/TechView.vue'),
+      path: '/epk',
+      name: 'epk',
+      component: () => import('@/views/EPKView.vue'),
     },
   ],
 })
