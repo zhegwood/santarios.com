@@ -58,15 +58,20 @@ const onPosterClick = async (poster: MediaAsset) => {
     <p class="text">Santa Rios merch available at all live concerts!</p>
     <hr class="my-4" />
     <h3>T-Shirts</h3>
-    <div class="flex flex-wrap gap-4 mb-4">
-      <button v-for="shirt in shirts" :key="shirt.src" @click="onMediaClick(shirts, shirt)">
+    <div class="grid grid-cols-2 gap-4 mb-4 md:grid-cols-4">
+      <button
+        v-for="shirt in shirts"
+        :key="shirt.src"
+        class="mx-auto"
+        @click="onMediaClick(shirts, shirt)"
+      >
         <img :src="shirt.src" :alt="shirt.alt" class="h-full border rounded max-h-52" />
       </button>
     </div>
     <Posters class="mb-4" :posters="posters" @posterClick="onPosterClick" />
     <h3>Stickers</h3>
-    <div class="flex flex-wrap gap-4 mb-4">
-      <button v-for="s in stickers" :key="s.src" @click="onMediaClick(stickers, s)">
+    <div class="grid grid-cols-2 gap-4 mb-4 md:grid-cols-4">
+      <button v-for="s in stickers" :key="s.src" class="mx-auto" @click="onMediaClick(stickers, s)">
         <img :src="s.src" :alt="s.alt" class="w-full border rounded max-w-48" />
       </button>
     </div>

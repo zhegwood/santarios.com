@@ -104,13 +104,8 @@ const onLogoClick = async (logo: MediaAsset) => {
         <Posters :posters="posters" @poster-click="onPosterClick" />
         <hr class="my-4" />
         <h3>Logos</h3>
-        <div class="flex flex-wrap gap-4 mb-4">
-          <button
-            v-for="logo in logos"
-            :key="logo.src"
-            @click="onLogoClick(logo)"
-            class="w-full sm:w-1/3"
-          >
+        <div class="grid grid-cols-1 gap-4 mb-4 md:grid-cols-2">
+          <button v-for="logo in logos" :key="logo.src" @click="onLogoClick(logo)" class="mx-auto">
             <img :src="logo.src" :alt="logo.alt" class="h-full border rounded max-h-52" />
           </button>
         </div>

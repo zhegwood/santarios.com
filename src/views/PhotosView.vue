@@ -17,7 +17,12 @@ const onAssetClick = async (img: MediaAsset) => {
   <h1>Photos</h1>
   <div class="flex justify-center mb-4">
     <div class="flex flex-wrap max-w-6xl gap-2">
-      <button v-for="img in images" :key="img.src" @click="onAssetClick(img)">
+      <button
+        v-for="img in images"
+        :key="img.src"
+        class="mx-auto md:mx-0"
+        @click="onAssetClick(img)"
+      >
         <img
           :src="img.src"
           :alt="img.alt"
