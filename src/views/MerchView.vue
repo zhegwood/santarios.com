@@ -1,30 +1,13 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { nextTick, ref } from 'vue'
 import type { MediaAsset } from '@/composables/UseModal'
 import { useModal } from '@/composables/UseModal'
+import shirts from '@/mediats/shirts'
+import posters from '@/mediats/posters'
 import Modal from '@/components/lib/Modal.vue'
 import Posters from '@/components/Posters.vue'
 
-const { showModal, hideModal, modalAsset } = useModal(null)
-
-const images = ref<MediaAsset[]>([
-  {
-    src: new URL('@/assets/images/merch/t-shirt01.jpg', import.meta.url).href,
-    alt: "Women's Tank Sunburst Angel",
-  },
-  {
-    src: new URL('@/assets/images/merch/t-shirt02.jpg', import.meta.url).href,
-    alt: "Women's Tank Turquoise Angel",
-  },
-  {
-    src: new URL('@/assets/images/merch/t-shirt03.jpg', import.meta.url).href,
-    alt: 'Heather Graphite Gray',
-  },
-  {
-    src: new URL('@/assets/images/merch/t-shirt04.jpg', import.meta.url).href,
-    alt: 'Gray with Turquoise Angel',
-  },
-])
+const { showModal, hideModal, setAssets, onNext, onPrev, modalAsset } = useModal()
 
 const stickers = ref<MediaAsset[]>([
   {
@@ -56,6 +39,18 @@ const stickers = ref<MediaAsset[]>([
     alt: 'Stacked Purple with Tag White Background',
   },
 ])
+
+const onMediaClick = async (assets: MediaAsset[], asset: MediaAsset) => {
+  setAssets(assets)
+  await nextTick()
+  showModal(asset)
+}
+
+const onPosterClick = async (poster: MediaAsset) => {
+  setAssets(posters)
+  await nextTick()
+  showModal(poster)
+}
 </script>
 <template>
   <div>
@@ -64,19 +59,19 @@ const stickers = ref<MediaAsset[]>([
     <hr class="my-4" />
     <h3>T-Shirts</h3>
     <div class="flex flex-wrap gap-4 mb-4">
-      <button v-for="img in images" :key="img.src" @click="showModal(img)">
-        <img :src="img.src" :alt="img.alt" class="h-full border rounded max-h-52" />
+      <button v-for="shirt in shirts" :key="shirt.src" @click="onMediaClick(shirts, shirt)">
+        <img :src="shirt.src" :alt="shirt.alt" class="h-full border rounded max-h-52" />
       </button>
     </div>
-    <Posters class="mb-4" @show-modal="showModal" />
+    <Posters class="mb-4" :posters="posters" @posterClick="onPosterClick" />
     <h3>Stickers</h3>
     <div class="flex flex-wrap gap-4 mb-4">
-      <button v-for="s in stickers" :key="s.src" @click="showModal(s)">
+      <button v-for="s in stickers" :key="s.src" @click="onMediaClick(stickers, s)">
         <img :src="s.src" :alt="s.alt" class="w-full border rounded max-w-48" />
       </button>
     </div>
   </div>
-  <Modal v-if="modalAsset" @close="hideModal">
+  <Modal v-if="modalAsset" show-nav @prev="onPrev" @next="onNext" @close="hideModal">
     <img :src="modalAsset.src" :alt="modalAsset.alt" />
   </Modal>
 </template>

@@ -6,15 +6,22 @@ export interface MediaAsset {
   smallHeight?: string
 }
 
-export function useModal(assets: typeof ref<MediaAsset[]> | null) {
+export function useModal() {
   const modalAsset = ref<MediaAsset | null>(null)
+  const assets = ref<MediaAsset[] | null>(null)
 
   const currentIdx = computed((): number => {
-    // @ts-expect-error ref types are dumb
+    if (!assets.value) {
+      return 0
+    }
     return assets.value.findIndex((a) => {
       return a === modalAsset.value
     })
   })
+
+  const setAssets = (newAssets: MediaAsset[]) => {
+    assets.value = newAssets
+  }
 
   const showModal = (asset: MediaAsset) => {
     modalAsset.value = asset
@@ -25,22 +32,23 @@ export function useModal(assets: typeof ref<MediaAsset[]> | null) {
   }
 
   const onPrev = () => {
+    if (!assets.value) {
+      return
+    }
     modalAsset.value =
       currentIdx.value === 0
-        ? // @ts-expect-error ref types are dumb
-          assets.value[assets.value.length - 1]
-        : // @ts-expect-error ref types are dumb
-          assets.value[currentIdx.value - 1]
+        ? assets.value[assets.value.length - 1]
+        : assets.value[currentIdx.value - 1]
   }
 
   const onNext = () => {
+    if (!assets.value) {
+      return
+    }
     modalAsset.value =
-      // @ts-expect-error ref types are dumb
       currentIdx.value === assets.value.length - 1
-        ? // @ts-expect-error ref types are dumb
-          assets.value[0]
-        : // @ts-expect-error ref types are dumb
-          assets.value[currentIdx.value + 1]
+        ? assets.value[0]
+        : assets.value[currentIdx.value + 1]
   }
 
   return {
@@ -48,6 +56,7 @@ export function useModal(assets: typeof ref<MediaAsset[]> | null) {
     hideModal,
     onPrev,
     onNext,
+    setAssets,
     modalAsset,
   }
 }
