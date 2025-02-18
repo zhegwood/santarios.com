@@ -60,27 +60,35 @@ const onLogoClick = async (logo: MediaAsset) => {
     </p>
     <p class="text"><i>"You Can't Not Dance!"</i></p>
     <hr class="my-4" />
-    <div class="flex flex-col justify-center d-flex lg:flex-row align-center">
-      <a href="Santa-Rios-One-Sheet.pdf" target="_blank" class="text-lg link">
+    <div class="flex flex-col justify-center d-flex xl:flex-row align-center">
+      <a href="Santa-Rios-One-Sheet.pdf" target="_blank" class="text-lg link whitespace-nowrap">
         Santa Rios One Sheet
       </a>
-      <span class="hidden mx-2 lg:flex">|</span>
-      <a href="Santa-Rios-Song-List.pdf" target="_blank" class="text-lg link">
+      <span class="hidden mx-2 xl:flex">|</span>
+      <a href="Santa-Rios-Song-List.pdf" target="_blank" class="text-lg link whitespace-nowrap">
         Santa Rios Song List
       </a>
-      <span class="hidden mx-2 lg:flex">|</span>
-      <a href="Santa-Rios-Contract-Rider-2025.pdf" target="_blank" class="text-lg link">
+      <span class="hidden mx-2 xl:flex">|</span>
+      <a
+        href="Santa-Rios-Contract-Rider-2025.pdf"
+        target="_blank"
+        class="text-lg link whitespace-nowrap"
+      >
         Santa Rios Contract Rider {{ year }}
       </a>
-      <span class="hidden mx-2 lg:flex">|</span>
-      <a href="Santa-Rios-Input-List.pdf" target="_blank" class="text-lg link">
+      <span class="hidden mx-2 xl:flex">|</span>
+      <a href="Santa-Rios-Input-List.pdf" target="_blank" class="text-lg link whitespace-nowrap">
         Santa Rios Input List
       </a>
-      <span class="hidden mx-2 lg:flex">|</span>
+      <span class="hidden mx-2 xl:flex">|</span>
+      <a href="Santa-Rios-Stage-Plot.pdf" target="_blank" class="text-lg link whitespace-nowrap">
+        Santa Rios Stage Plot
+      </a>
+      <span class="hidden mx-2 xl:flex">|</span>
       <a
         href="https://www.youtube.com/@SantaRiosBand/videos?view=0&sort=dd&shelf_id=2"
         target="_blank"
-        class="text-lg link"
+        class="text-lg link whitespace-nowrap"
       >
         Santa Rios Live Videos
       </a>
