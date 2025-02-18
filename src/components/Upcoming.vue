@@ -9,6 +9,7 @@
       <li>5/30/2025 - The Lariat - Buena Vista, CO</li>
       <li>6/21/2025 - Nissi's - Lafayette, CO</li>
       <li>7/4/2025 - Riverside Park - Salida, CO</li>
+      <li>8/23/2025 - La Vida! - Colorado Springs, CO</li>
       <li>8/30/2025 - CO State Fair - Pueblo, CO</li>
     </ul>
   </div>
