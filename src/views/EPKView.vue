@@ -1,15 +1,11 @@
 <script setup lang="ts">
-import { computed, nextTick, ref } from 'vue'
+import { computed, nextTick } from 'vue'
 import { useModal } from '@/composables/UseModal'
 import type { MediaAsset } from '@/composables/UseModal'
 import posters from '@/mediats/posters'
 import logos from '@/mediats/logos'
 import Modal from '@/components/lib/Modal.vue'
 import Posters from '@/components/Posters.vue'
-
-const year = computed(() => {
-  return new Date().getFullYear()
-})
 
 const { onPrev, onNext, showModal, hideModal, setAssets, modalAsset } = useModal()
 
@@ -28,69 +24,67 @@ const onLogoClick = async (logo: MediaAsset) => {
 <template>
   <div>
     <h1>Electronic Press Kit</h1>
+    <p class="text">Santa Rios brings the electrifying Latin fusion of Carlos Santana to life!</p>
     <p class="text">
-      The brainchild of Producers George A. Mossman and Bones Davis, Santa Rios is the fruition of
-      their dream to create a respectful homage to the music of Carlos Santana. The drummers have
-      collaborated on several projects including a Grateful Dead Tribute and a Last Waltz production
-      that has sold out every performance for the past 8 years!.
+      Faithfully recreating tunes from Santana's 5 + decades career, Santa Rios captivates audiences
+      from their first note.
     </p>
     <p class="text">
-      Bones' first saw Santana in concert at the age of 12 in his native New Mexico and he has been
-      a true fan ever since. This initial spark led him on a life long quest to absorb as much
-      knowledge about Latin and African rhythms and traditions as possible. Bones shares his passion
-      for drumming with George who is also well versed in a variety of styles and is a Conguero
-      Extraordinaire!
+      This powerful, nine-piece ensemble pays homage to Santana's iconic music, blending Afro-Cuban
+      rhythms, Blues and Rock with passion and precision. The band's amazing live performances
+      showcase their musicianship and dedication to honoring Carlos Santana's legendary legacy,
+      covering his extensive catalog and getting everybody dancing.
     </p>
     <p class="text">
-      Hailing from central Colorado, the 2 recruited Toby “Guitarlos” Dunn on guitars, Aaron
-      Handrich on Hammond and Piano, and Zach Hegwood on Bass. Colorado Floyd's long time drummer
-      and the SNLW horn section round out this powerful, nine-piece ensemble who blend Afro-Cuban
-      rhythms with Blues and Rock to get everyone dancing.
+      Santa Rios seamlessly segues from Santana's psychedelic jams of San Francisco and Woodstock
+      through the timeless hits from their Supernatural album and beyond.
     </p>
     <p class="text">
-      Santa Rios captivates its audiences from their first note to the last, authentically
-      recreating tunes from Santana's five-decade + career. The band's amazing live performances
-      showcase their musicianship and dedication to honoring Santana's legendary legacy. From the
-      psychedelic jams of San Francisco and Woodstock in the '60s to the timeless hits from the
-      Supernatural album and beyond, Santa Rios covers Santana's extensive catalog with passion and
-      precision. From chart-toppers to hidden gems, Santa Rios offers a diverse and accessible
-      setlist that appeals to both die-hard Santana fans and newcomers alike. Known for their
-      high-energy concerts, Santa Rios infuses every show with infectious rhythms and soul-stirring
-      melodies, creating an atmosphere that is so joyous…
+      Known for their high-energy concerts, Santa Rios has built a strong following selling out many
+      performances at some of Colorado's most prestigious venues. They offer a diverse and
+      accessible setlist that appeals to both die-hard Santana fans and newcomers alike.
+    </p>
+    <p class="text">
+      Santa Rios infuses every show with Santana's soul-stirring melodies and infectious rhythms,
+      creating an atmosphere that is so joyous...
     </p>
     <p class="text"><i>"You Can't Not Dance!"</i></p>
     <hr class="my-4" />
-    <div class="flex flex-col justify-center d-flex xl:flex-row align-center">
+    <div class="flex flex-col justify-center d-flex lg:flex-row align-center">
+      <a href="Santa-Rios-Band-Bio.pdf" target="_blank" class="text-lg link whitespace-nowrap">
+        Band Bio
+      </a>
+      <span class="hidden mx-2 lg:flex">|</span>
       <a href="Santa-Rios-One-Sheet.pdf" target="_blank" class="text-lg link whitespace-nowrap">
-        Santa Rios One Sheet
+        One Sheet
       </a>
-      <span class="hidden mx-2 xl:flex">|</span>
+      <span class="hidden mx-2 lg:flex">|</span>
       <a href="Santa-Rios-Song-List.pdf" target="_blank" class="text-lg link whitespace-nowrap">
-        Santa Rios Song List
+        Song List
       </a>
-      <span class="hidden mx-2 xl:flex">|</span>
+      <span class="hidden mx-2 lg:flex">|</span>
       <a
         href="Santa-Rios-Contract-Rider-2025.pdf"
         target="_blank"
         class="text-lg link whitespace-nowrap"
       >
-        Santa Rios Contract Rider {{ year }}
+        Contract Rider
       </a>
-      <span class="hidden mx-2 xl:flex">|</span>
+      <span class="hidden mx-2 lg:flex">|</span>
       <a href="Santa-Rios-Input-List.pdf" target="_blank" class="text-lg link whitespace-nowrap">
-        Santa Rios Input List
+        Input List
       </a>
-      <span class="hidden mx-2 xl:flex">|</span>
+      <span class="hidden mx-2 lg:flex">|</span>
       <a href="Santa-Rios-Stage-Plot.pdf" target="_blank" class="text-lg link whitespace-nowrap">
-        Santa Rios Stage Plot
+        Stage Plot
       </a>
-      <span class="hidden mx-2 xl:flex">|</span>
+      <span class="hidden mx-2 lg:flex">|</span>
       <a
         href="https://www.youtube.com/@SantaRiosBand/videos?view=0&sort=dd&shelf_id=2"
         target="_blank"
         class="text-lg link whitespace-nowrap"
       >
-        Santa Rios Live Videos
+        Live Videos
       </a>
     </div>
     <hr class="my-4" />
@@ -122,6 +116,11 @@ const onLogoClick = async (logo: MediaAsset) => {
     </div>
   </div>
   <Modal v-if="modalAsset" show-nav @prev="onPrev" @next="onNext" @close="hideModal">
-    <img :src="modalAsset.src" :alt="modalAsset.alt" />
+    <div>
+      <img :src="modalAsset.src" :alt="modalAsset.alt" />
+      <a v-if="modalAsset.fullSrc" :href="modalAsset.fullSrc" class="link" target="_blank">
+        View/Download High Res
+      </a>
+    </div>
   </Modal>
 </template>

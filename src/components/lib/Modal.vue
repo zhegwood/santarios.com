@@ -30,9 +30,7 @@ onBeforeUnmount(() => {
     <div class="fixed inset-0 bg-gray-500/75" aria-hidden="true"></div>
     <div class="fixed inset-0 z-20 w-screen overflow-y-auto">
       <div class="flex items-center justify-center min-h-full p-4 text-center">
-        <div
-          class="relative text-left bg-white border rounded shadow-xl sm:my-8 sm:w-full sm:max-w-lg"
-        >
+        <div class="relative text-left bg-white border rounded shadow-xl sm:max-w-2xl">
           <div class="p-4 bg-white">
             <div class="flex items-center justify-center">
               <slot />

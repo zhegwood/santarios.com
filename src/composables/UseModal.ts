@@ -3,6 +3,7 @@ import { computed, ref } from 'vue'
 export interface MediaAsset {
   src: string
   alt: string
+  fullSrc?: string
   smallHeight?: string
 }
 

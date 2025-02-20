@@ -30,7 +30,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <SiteHeader ref="header" />
+  <SiteHeader ref="header" @header-loaded="setTopPadding" />
   <div class="container px-4 pb-8 mx-auto" :style="bodyTopPadding">
     <RouterView />
   </div>

@@ -1,11 +1,24 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
+const emit = defineEmits(['header-loaded'])
+
 const expanded = ref(false)
+
+// this emit is in case someone is on a super slow connection and header height needs to be re-calc'd
+const onImageLoad = () => {
+  console.log('onImageLoad')
+  emit('header-loaded')
+}
 </script>
 <template>
   <div class="fixed top-0 left-0 right-0 z-10 bg-white">
-    <img src="@/assets/images/logo.png" alt="Santa Rios" class="block w-full max-w-3xl mx-auto" />
+    <img
+      src="@/assets/images/logo.jpg"
+      alt="Santa Rios"
+      class="block w-full max-w-3xl mx-auto"
+      @load="onImageLoad"
+    />
     <menu class="flex items-center justify-end h-10 border-t border-b sm:hidden">
       <button type="button" class="block w-6 h-6 mr-2" @click="expanded = !expanded">
         <svg
