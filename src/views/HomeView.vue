@@ -1,5 +1,4 @@
 <script setup lang="ts"></script>
-
 <template>
   <div>
     <h1>Home</h1>
@@ -21,7 +20,7 @@
     <img
       src="@/assets/images/band_home.jpg"
       alt="Santa Rios"
-      class="block max-w-6xl mx-auto w-full object-contain"
+      class="block object-contain w-full max-w-6xl mx-auto"
     />
   </div>
 </template>

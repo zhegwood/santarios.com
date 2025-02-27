@@ -1,7 +1,15 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+interface Props {
+  hideTitle?: boolean
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  hideTitle: false,
+})
+</script>
 <template>
   <div>
-    <h3>Upcoming Shows</h3>
+    <h3 v-if="!props.hideTitle">Upcoming Shows</h3>
     <ul>
       <li>3/1/2025 - Stargazers - Colorado Springs, CO</li>
       <li>4/5/2025 - A-Church (private event) - Salida, CO</li>

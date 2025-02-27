@@ -24,29 +24,14 @@ const onLogoClick = async (logo: MediaAsset) => {
 <template>
   <div>
     <h1>Electronic Press Kit</h1>
-    <p class="text">Santa Rios brings the electrifying Latin fusion of Carlos Santana to life!</p>
     <p class="text">
-      Faithfully recreating tunes from Santana's 5 + decades career, Santa Rios captivates audiences
-      from their first note.
+      Santa Rios captivates audiences from the very first note to the final chord, faithfully
+      recreating tunes from Carlos Santana's illustrious five plus decades career.
     </p>
     <p class="text">
-      This powerful, nine-piece ensemble pays homage to Santana's iconic music, blending Afro-Cuban
-      rhythms, Blues and Rock with passion and precision. The band's amazing live performances
-      showcase their musicianship and dedication to honoring Carlos Santana's legendary legacy,
-      covering his extensive catalog and getting everybody dancing.
-    </p>
-    <p class="text">
-      Santa Rios seamlessly segues from Santana's psychedelic jams of San Francisco and Woodstock
-      through the timeless hits from their Supernatural album and beyond.
-    </p>
-    <p class="text">
-      Known for their high-energy concerts, Santa Rios has built a strong following selling out many
-      performances at some of Colorado's most prestigious venues. They offer a diverse and
-      accessible setlist that appeals to both die-hard Santana fans and newcomers alike.
-    </p>
-    <p class="text">
-      Santa Rios infuses every show with Santana's soul-stirring melodies and infectious rhythms,
-      creating an atmosphere that is so joyous...
+      The band's remarkable live performances showcase their exceptional musicianship and underscore
+      their unwavering dedication to honoring the legendary musician's legacy with joy and
+      precision."
     </p>
     <p class="text"><i>"You Can't Not Dance!"</i></p>
     <hr class="my-4" />
@@ -89,7 +74,7 @@ const onLogoClick = async (logo: MediaAsset) => {
     </div>
     <hr class="my-4" />
     <img
-      src="@/assets/images/band_home.jpg"
+      src="@/assets/images/Band_BnW.jpg"
       alt="Santa Rios Live"
       class="block object-contain w-full max-w-6xl mx-auto"
     />

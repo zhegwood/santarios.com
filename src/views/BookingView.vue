@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import Upcoming from '@/components/Upcoming.vue'
+import PastVenue from '@/components/PastVenue.vue'
 const year = computed(() => {
   return new Date().getFullYear()
 })
@@ -16,20 +16,6 @@ const year = computed(() => {
       Santa Rios Contract Rider {{ year }}
     </a>
     <hr class="my-4" />
-    <Upcoming />
-    <hr class="my-4" />
-    <h3>Past Venues</h3>
-    <ul>
-      <li>Victoria Tavern - Salida, CO</li>
-      <li>Boulder Theater - Boulder, CO</li>
-      <li>Stargazers - Colorado Springs, CO</li>
-      <li>Nissi's - Lafayette, CO</li>
-      <li>Steamplant - Salida, CO</li>
-      <li>Tabor Opera House - Leadville, CO</li>
-      <li>The Lariat - Buena Vista, CO</li>
-      <li>Independent Whitewater - Salida, CO</li>
-      <li>Riverside Park - Salida, CO</li>
-      <li>Ivy Ballroom - Buena Vista, CO</li>
-    </ul>
+    <PastVenue />
   </div>
 </template>

@@ -56,6 +56,16 @@ const onImageLoad = () => {
         </RouterLink>
       </li>
       <li>
+        <RouterLink :to="{ name: 'history' }" class="block text-lg" @click="expanded = false">
+          History
+        </RouterLink>
+      </li>
+      <li>
+        <RouterLink :to="{ name: 'shows' }" class="block text-lg" @click="expanded = false">
+          Shows
+        </RouterLink>
+      </li>
+      <li>
         <RouterLink :to="{ name: 'booking' }" class="block text-lg" @click="expanded = false">
           Booking
         </RouterLink>
@@ -69,6 +79,16 @@ const onImageLoad = () => {
         <RouterLink :to="{ name: 'photos' }" class="block text-lg" @click="expanded = false">
           Photos
         </RouterLink>
+      </li>
+      <li>
+        <a
+          href="https://www.youtube.com/@SantaRiosBand"
+          class="block text-lg"
+          target="_blank"
+          @click="expanded = false"
+        >
+          Videos
+        </a>
       </li>
       <li>
         <RouterLink :to="{ name: 'epk' }" class="block text-lg" @click="expanded = false">
@@ -98,6 +118,16 @@ const onImageLoad = () => {
           </RouterLink>
         </li>
         <li>
+          <RouterLink :to="{ name: 'history' }" class="hover:underline focus:underline">
+            History
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink :to="{ name: 'shows' }" class="hover:underline focus:underline">
+            Shows
+          </RouterLink>
+        </li>
+        <li>
           <RouterLink :to="{ name: 'booking' }" class="hover:underline focus:underline">
             Booking
           </RouterLink>
@@ -111,6 +141,16 @@ const onImageLoad = () => {
           <RouterLink :to="{ name: 'photos' }" class="hover:underline focus:underline">
             Photos
           </RouterLink>
+        </li>
+        <li>
+          <a
+            href="https://www.youtube.com/@SantaRiosBand"
+            class="hover:underline focus:underline"
+            target="_blank"
+            @click="expanded = false"
+          >
+            Videos
+          </a>
         </li>
         <li>
           <RouterLink :to="{ name: 'epk' }" class="hover:underline focus:underline">
