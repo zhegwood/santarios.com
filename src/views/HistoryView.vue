@@ -4,7 +4,7 @@
     <h1>History</h1>
     <p class="text">
       Santa Rios is the brain-child of producers and percussionists, George A. Mossman and Bones
-      Davis. George has been a performing for over 30 years as a drummer, percussionist and vocalist
+      Davis. George has been performing for over 30 years as a drummer, percussionist and vocalist
       with bands too numerous to list. Bones' first concert was Santana and he has been a fan ever
       since. Enthralled with world music, he has toured Europe, the Caribbean, Central America,
       Mexico and the United States as both a performer and teacher. George and Bones met in Salida,
