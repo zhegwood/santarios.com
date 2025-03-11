@@ -18,6 +18,7 @@ const props = withDefaults(defineProps<Props>(), {
       <li>6/25/2025 - Four Mile Historic Park - Denver , CO</li>
       <li>7/4/2025 - Riverside Park - Salida, CO</li>
       <li>8/23/2025 - La Vida! - Colorado Springs, CO</li>
+      <li>8/28/2025 - Riverside Park - Salida, CO</li>
       <li>8/30/2025 - CO State Fair - Pueblo, CO</li>
       <li>9/20/2025 - Breckenridge Brewery - Littleton, CO</li>
       <li>10/31/2025 - Stargazers - Colorado Springs, CO</li>
