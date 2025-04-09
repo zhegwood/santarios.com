@@ -11,7 +11,6 @@ const props = withDefaults(defineProps<Props>(), {
   <div>
     <h3 v-if="!props.hideTitle">Upcoming Shows</h3>
     <ul>
-      <li>4/5/2025 - A-Church (private event) - Salida, CO</li>
       <li>5/3/2025 - Mesa Theater - Grand Junction, CO</li>
       <li>5/30/2025 - The Lariat - Buena Vista, CO</li>
       <li>6/21/2025 - Nissi's - Lafayette, CO</li>

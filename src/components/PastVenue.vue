@@ -11,6 +11,7 @@ const props = withDefaults(defineProps<Props>(), {
   <div>
     <h3 v-if="!props.hideTitle">Past Venue Highlights</h3>
     <ul>
+      <li>A Church - Salida, CO</li>
       <li>Victoria Tavern - Salida, CO</li>
       <li>Boulder Theater - Boulder, CO</li>
       <li>Stargazers - Colorado Springs, CO</li>
