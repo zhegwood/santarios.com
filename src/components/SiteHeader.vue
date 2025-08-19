@@ -7,7 +7,6 @@ const expanded = ref(false)
 
 // this emit is in case someone is on a super slow connection and header height needs to be re-calc'd
 const onImageLoad = () => {
-  console.log('onImageLoad')
   emit('header-loaded')
 }
 </script>
@@ -93,6 +92,11 @@ const onImageLoad = () => {
       <li>
         <RouterLink :to="{ name: 'epk' }" class="block text-lg" @click="expanded = false">
           EPK
+        </RouterLink>
+      </li>
+      <li>
+        <RouterLink :to="{ name: 'tech' }" class="block text-lg" @click="expanded = false">
+          Tech
         </RouterLink>
       </li>
       <!--
