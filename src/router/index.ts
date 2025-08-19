@@ -43,6 +43,11 @@ const router = createRouter({
       name: 'epk',
       component: () => import('@/views/EPKView.vue'),
     },
+    {
+      path: '/tech',
+      name: 'tech',
+      component: () => import('@/views/TechView.vue'),
+    },
   ],
 })
 

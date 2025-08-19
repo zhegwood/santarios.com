@@ -157,6 +157,11 @@ const onImageLoad = () => {
             EPK
           </RouterLink>
         </li>
+        <li>
+          <RouterLink :to="{ name: 'tech' }" class="hover:underline focus:underline">
+            Tech
+          </RouterLink>
+        </li>
         <!--
         <li>
           <RouterLink :to="{ name: 'booking' }"> Booking </RouterLink>

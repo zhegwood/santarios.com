@@ -56,14 +56,6 @@ const onLogoClick = async (logo: MediaAsset) => {
         Contract Rider
       </a>
       <span class="hidden mx-2 lg:flex">|</span>
-      <a href="Santa-Rios-Input-List.pdf" target="_blank" class="text-lg link whitespace-nowrap">
-        Input List
-      </a>
-      <span class="hidden mx-2 lg:flex">|</span>
-      <a href="Santa-Rios-Stage-Plot.pdf" target="_blank" class="text-lg link whitespace-nowrap">
-        Stage Plot
-      </a>
-      <span class="hidden mx-2 lg:flex">|</span>
       <a
         href="https://www.youtube.com/@SantaRiosBand/videos?view=0&sort=dd&shelf_id=2"
         target="_blank"
