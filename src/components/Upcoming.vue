@@ -11,7 +11,6 @@ const props = withDefaults(defineProps<Props>(), {
   <div>
     <h3 v-if="!props.hideTitle">Upcoming Shows</h3>
     <ul>
-      <li>8/30/2025 - CO State Fair - Pueblo, CO</li>
       <li>9/20/2025 - Breckenridge Brewery - Littleton, CO</li>
       <li>11/14/2025 - Stargazer's - Colorado Springs, CO</li>
       <li>12/19/2025 - Nissi's - Lafayette, CO</li>
