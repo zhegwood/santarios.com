@@ -11,6 +11,7 @@ const props = withDefaults(defineProps<Props>(), {
   <div>
     <h3 v-if="!props.hideTitle">Past Venue Highlights</h3>
     <ul>
+      <li>Breckenridge Brewery - Littleton, CO</li>
       <li>Colorado State Fair - Pueblo, CO</li>
       <li>Cheyenne Mountain Resort - Colorado Springs, CO</li>
       <li>Four Mile Historic Park - Denver, CO</li>

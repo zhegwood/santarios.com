@@ -35,3 +35,9 @@ onBeforeUnmount(() => {
     <RouterView />
   </div>
 </template>
+
+<style lang="scss">
+.global-link {
+  @apply text-blue-500;
+}
+</style>
