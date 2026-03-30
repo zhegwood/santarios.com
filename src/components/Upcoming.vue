@@ -27,7 +27,7 @@ const props = withDefaults(defineProps<Props>(), {
         <a href="https://nissis.com/" class="global-link">6/12/2026 - Nissi's - Lafayette, CO</a>
       </li>
       <li>7/4/2026 - Riverside Park - Salida, CO</li>
-      <li>7/4/2026 - Riverside Park - Salida, CO</li>
+      <li>7/10/2026 - Festival Fridays - Pueblo, CO</li>
       <li>7/18/2026 - Private Party</li>
       <li>8/13/2026 - Riverside Park - Salida, CO</li>
       <li>

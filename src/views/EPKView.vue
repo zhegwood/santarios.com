@@ -49,7 +49,7 @@ const onLogoClick = async (logo: MediaAsset) => {
       </a>
       <span class="hidden mx-2 lg:flex">|</span>
       <a
-        href="Santa-Rios-Contract-Rider-2025.pdf"
+        href="Santa-Rios-Contract-Rider.pdf"
         target="_blank"
         class="text-lg link whitespace-nowrap"
       >

@@ -12,7 +12,7 @@ const year = computed(() => {
     <p class="text"><a href="mailto:bonesdrums@gmail.com" class="link">bonesdrums@gmail.com</a></p>
     <p class="text"><a href="tel:+17192073422" class="link">(719) 207-3422</a></p>
     <hr class="my-4" />
-    <a href="Santa-Rios-Contract-Rider-2025.pdf" target="_blank" class="text link">
+    <a href="Santa-Rios-Contract-Rider.pdf" target="_blank" class="text link">
       Santa Rios Contract Rider {{ year }}
     </a>
     <hr class="my-4" />

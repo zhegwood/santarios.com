@@ -40,7 +40,7 @@ const year = computed(() => {
     </p>
     <p class="text"><i>"You Can't Not Dance!"</i></p>
     <!--
-    <a href="Santa-Rios-Contract-Rider-2025.pdf" target="_blank" class="text link">
+    <a href="Santa-Rios-Contract-Rider.pdf" target="_blank" class="text link">
       Santa Rios Contract Rider {{ year }}
     </a>
     -->
