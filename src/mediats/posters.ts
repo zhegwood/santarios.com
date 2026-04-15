@@ -9,11 +9,19 @@ export default <MediaAsset[]>[
     alt: 'Black Tan Poster Small',
   },
   {
-    src: new URL('@/assets/images/merch/poster03.png', import.meta.url).href,
-    alt: 'Tourquoise Torus on Black',
-  },
-  {
     src: new URL('@/assets/images/merch/poster04.jpg', import.meta.url).href,
     alt: 'Blank Turquoise Poster',
+  },
+  {
+    src: new URL('@/assets/images/merch/poster05.jpg', import.meta.url).href,
+    alt: 'Toby on Earth',
+  },
+  {
+    src: new URL('@/assets/images/merch/poster06.jpg', import.meta.url).href,
+    alt: 'Guitar Girl with Legs',
+  },
+  {
+    src: new URL('@/assets/images/merch/poster07.jpg', import.meta.url).href,
+    alt: 'Western',
   },
 ]

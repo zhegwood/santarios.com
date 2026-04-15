@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, nextTick } from 'vue'
+import { nextTick } from 'vue'
 import { useModal } from '@/composables/UseModal'
 import type { MediaAsset } from '@/composables/UseModal'
 import posters from '@/mediats/posters'
@@ -94,7 +94,7 @@ const onLogoClick = async (logo: MediaAsset) => {
   </div>
   <Modal v-if="modalAsset" show-nav @prev="onPrev" @next="onNext" @close="hideModal">
     <div>
-      <img :src="modalAsset.src" :alt="modalAsset.alt" />
+      <img :src="modalAsset.src" :alt="modalAsset.alt" style="max-height: 480px" />
       <a v-if="modalAsset.fullSrc" :href="modalAsset.fullSrc" class="link" target="_blank">
         View/Download High Res
       </a>

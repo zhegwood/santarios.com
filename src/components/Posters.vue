@@ -16,7 +16,7 @@ const showModal = (p: MediaAsset) => {
 <template>
   <div>
     <h3>Posters</h3>
-    <div class="grid grid-cols-2 gap-4 mb-4 md:grid-cols-4">
+    <div class="grid grid-cols-2 gap-4 mb-4 md:grid-cols-3">
       <button v-for="p in props.posters" :key="p.src" class="mx-auto" @click="showModal(p)">
         <img :src="p.src" :alt="p.alt" class="h-full border rounded max-h-52" />
       </button>
