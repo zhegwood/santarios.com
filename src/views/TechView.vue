@@ -12,7 +12,7 @@
         Input List
       </a>
       <span class="hidden mx-2 lg:flex">|</span>
-      <a href="Santa-Rios-Stage-Plot.pdf" target="_blank" class="text-lg link whitespace-nowrap">
+      <a href="Santa-Rios-Stage-Plot.jpg" target="_blank" class="text-lg link whitespace-nowrap">
         Stage Plot
       </a>
     </div>
