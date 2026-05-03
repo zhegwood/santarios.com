@@ -74,7 +74,7 @@ const onLogoClick = async (logo: MediaAsset) => {
     <div class="flex flex-col gap-8 lg:flex-row">
       <div class="w-full lg:w-1/2">
         <img
-          src="@/assets/images/band_cuba.jpg"
+          src="@/assets/images/santa_rios_havana.jpg"
           alt="Santa Rios"
           class="block object-contain w-full max-w-6xl mx-auto"
         />
