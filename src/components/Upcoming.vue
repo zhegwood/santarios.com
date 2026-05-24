@@ -13,24 +13,6 @@ const props = withDefaults(defineProps<Props>(), {
     <ul>
       <li>
         <a
-          href="https://stargazerstheatre.com/product/santa-rios-april-24/"
-          class="global-link"
-          target="_blank"
-        >
-          4/25/2026 - Stargazer's - Colorado Springs, CO
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://dice.fm/event/l8o6ox-santa-rios-9th-may-the-lariat-buena-vista-tickets?pid=FSXRQ6PG&_branch_match_id=1349526693002743835&utm_medium=partners_api&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXz8nMy9ZLyUxO1UvL1fcyNTE2MjMwTjQwsrQvyEyxdQuOCAo0C3BXqytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAKEn4dEgAAAA%3D"
-          class="global-link"
-          target="_blank"
-        >
-          5/09/2026 - The Lariat - Buena Vista, CO
-        </a>
-      </li>
-      <li>
-        <a
           href="https://www.glenwoodchamber.com/main-stage-lineup/"
           class="global-link"
           target="_blank"
@@ -44,7 +26,15 @@ const props = withDefaults(defineProps<Props>(), {
         </a>
       </li>
       <li>7/4/2026 - Riverside Park - Salida, CO</li>
-      <li>7/10/2026 - Festival Fridays - Pueblo, CO</li>
+      <li>
+        <a
+          href="https://my.sdc-arts.org/festivalfridays26/3650"
+          class="global-link"
+          target="_blank"
+        >
+          7/10/2026 - Festival Fridays - Pueblo, CO
+        </a>
+      </li>
       <li>7/18/2026 - Private Party</li>
       <li>8/13/2026 - Riverside Park - Salida, CO</li>
       <li>
@@ -75,6 +65,11 @@ const props = withDefaults(defineProps<Props>(), {
       <li>
         <a href="https://buffalorosegolden.com/shows/" class="global-link" target="_blank">
           10/2/2026 - Buffalo Rose - Golden, CO
+        </a>
+      </li>
+      <li>
+        <a href="https://buffalorosegolden.com/shows/" class="global-link" target="_blank">
+          10/16/2026 - Vilar Center - Beaver Creek, CO
         </a>
       </li>
     </ul>
