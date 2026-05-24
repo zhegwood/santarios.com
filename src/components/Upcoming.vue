@@ -12,17 +12,17 @@ const props = withDefaults(defineProps<Props>(), {
     <h3 v-if="!props.hideTitle">Upcoming Shows</h3>
     <ul>
       <li>
+        <a href="https://nissis.com/" class="global-link" target="_blank">
+          6/12/2026 - Nissi's - Lafayette, CO
+        </a>
+      </li>
+      <li>
         <a
           href="https://www.glenwoodchamber.com/main-stage-lineup/"
           class="global-link"
           target="_blank"
         >
           6/19/2026 - 129th Strawberry Days Festival - Glenwood Springs, CO
-        </a>
-      </li>
-      <li>
-        <a href="https://nissis.com/" class="global-link" target="_blank">
-          6/12/2026 - Nissi's - Lafayette, CO
         </a>
       </li>
       <li>7/4/2026 - Riverside Park - Salida, CO</li>
