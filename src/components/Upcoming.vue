@@ -11,7 +11,6 @@ const props = withDefaults(defineProps<Props>(), {
   <div>
     <h3 v-if="!props.hideTitle">Upcoming Shows</h3>
     <ul>
-      <li>7/4/2026 - Riverside Park - Salida, CO</li>
       <li>
         <a
           href="https://my.sdc-arts.org/festivalfridays26/3650"
