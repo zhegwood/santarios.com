@@ -53,28 +53,38 @@ const onPosterClick = async (poster: MediaAsset) => {
 }
 </script>
 <template>
-  <div>
-    <h1>Merchandise</h1>
-    <p class="text">Santa Rios merch available at all live concerts!</p>
-    <hr class="my-4" />
-    <h3>T-Shirts</h3>
-    <div class="grid grid-cols-2 gap-4 mb-4 md:grid-cols-4">
-      <button
-        v-for="shirt in shirts"
-        :key="shirt.src"
-        class="mx-auto"
-        @click="onMediaClick(shirts, shirt)"
-      >
-        <img :src="shirt.src" :alt="shirt.alt" class="h-full border rounded max-h-52" />
-      </button>
-    </div>
-    <Posters class="mb-4" :posters="posters" @posterClick="onPosterClick" />
-    <h3>Stickers</h3>
-    <div class="grid grid-cols-2 gap-4 mb-4 md:grid-cols-4">
-      <button v-for="s in stickers" :key="s.src" class="mx-auto" @click="onMediaClick(stickers, s)">
-        <img :src="s.src" :alt="s.alt" class="w-full border rounded max-w-48" />
-      </button>
-    </div>
+  <div class="space-y-6">
+    <section class="rounded-[2rem] bg-slate-900/60 p-6 backdrop-blur-sm sm:p-8">
+      <h1>Merchandise</h1>
+      <p class="text">Santa Rios merch available at all live concerts.</p>
+    </section>
+
+    <section class="rounded-[2rem] bg-slate-800/50 p-6 sm:p-8">
+      <h3>T-Shirts</h3>
+      <div class="mt-4 grid grid-cols-2 gap-4 md:grid-cols-4">
+        <button
+          v-for="shirt in shirts"
+          :key="shirt.src"
+          class="mx-auto rounded-[1.25rem] bg-slate-900/70 p-2 transition hover:-translate-y-1 hover:bg-slate-700/70"
+          @click="onMediaClick(shirts, shirt)"
+        >
+          <img :src="shirt.src" :alt="shirt.alt" class="h-full max-h-52 rounded-[0.9rem] object-cover" />
+        </button>
+      </div>
+    </section>
+
+    <section class="rounded-[2rem] bg-slate-800/50 p-6 sm:p-8">
+      <Posters class="mb-4" :posters="posters" @posterClick="onPosterClick" />
+    </section>
+
+    <section class="rounded-[2rem] bg-slate-800/50 p-6 sm:p-8">
+      <h3>Stickers</h3>
+      <div class="mt-4 grid grid-cols-2 gap-4 md:grid-cols-4">
+        <button v-for="s in stickers" :key="s.src" class="mx-auto rounded-[1.25rem] bg-slate-900/70 p-2 transition hover:-translate-y-1 hover:bg-slate-700/70" @click="onMediaClick(stickers, s)">
+          <img :src="s.src" :alt="s.alt" class="w-full max-w-48 rounded-[0.9rem] object-cover" />
+        </button>
+      </div>
+    </section>
   </div>
   <Modal v-if="modalAsset" show-nav @prev="onPrev" @next="onNext" @close="hideModal">
     <img :src="modalAsset.src" :alt="modalAsset.alt" />

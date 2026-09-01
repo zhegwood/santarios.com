@@ -91,13 +91,13 @@ const onLogoClick = async (logo: MediaAsset) => {
         <div></div>
       </div>
     </div>
+    <Modal v-if="modalAsset" show-nav @prev="onPrev" @next="onNext" @close="hideModal">
+      <div>
+        <img :src="modalAsset.src" :alt="modalAsset.alt" style="max-height: 480px" />
+        <a v-if="modalAsset.fullSrc" :href="modalAsset.fullSrc" class="link" target="_blank">
+          View/Download High Res
+        </a>
+      </div>
+    </Modal>
   </div>
-  <Modal v-if="modalAsset" show-nav @prev="onPrev" @next="onNext" @close="hideModal">
-    <div>
-      <img :src="modalAsset.src" :alt="modalAsset.alt" style="max-height: 480px" />
-      <a v-if="modalAsset.fullSrc" :href="modalAsset.fullSrc" class="link" target="_blank">
-        View/Download High Res
-      </a>
-    </div>
-  </Modal>
 </template>
