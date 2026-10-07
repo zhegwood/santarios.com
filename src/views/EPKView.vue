@@ -2,18 +2,10 @@
 import { nextTick } from 'vue'
 import { useModal } from '@/composables/UseModal'
 import type { MediaAsset } from '@/composables/UseModal'
-import posters from '@/mediats/posters'
 import logos from '@/mediats/logos'
 import Modal from '@/components/lib/Modal.vue'
-import Posters from '@/components/Posters.vue'
 
 const { onPrev, onNext, showModal, hideModal, setAssets, modalAsset } = useModal()
-
-const onPosterClick = async (poster: MediaAsset) => {
-  setAssets(posters)
-  await nextTick()
-  showModal(poster)
-}
 
 const onLogoClick = async (logo: MediaAsset) => {
   setAssets(logos)
@@ -25,18 +17,27 @@ const onLogoClick = async (logo: MediaAsset) => {
   <div>
     <h1>Electronic Press Kit</h1>
     <p class="text">
-      Santa Rios captivates audiences from the very first note to the final chord, faithfully
-      recreating tunes from Carlos Santana's illustrious five plus decades career.
+      Santa Rios is not your average tribute band. This explosive 10-piece powerhouse delivers the
+      music of Santana with authenticity, fire, and soul, featuring a wall of percussion, four
+      blaring horns, searing Hammond organ, and the unmistakable guitar mastery of “Guitarlos”
+      leading the charge.
     </p>
     <p class="text">
-      The band's remarkable live performances showcase their exceptional musicianship and underscore
-      their unwavering dedication to honoring the legendary musician's legacy with joy and
-      precision."
+      From the iconic hits that defined generations to deep cuts beloved by true fans, Santa Rios
+      captures the raw energy, spiritual groove, and dance-floor magic that made Santana legendary.
+      But the journey doesn’t stop there. Expect thrilling musical cameos from artists like Steely
+      Dan, The Doobie Brothers, Paul Simon, Manu Chao, Chicago, Traffic, Fleetwood Mac, Celia
+      Cruz, War, and more — all woven seamlessly into a nonstop celebration of rhythm, guitar,
+      and groove.
     </p>
-    <p class="text"><i>"You Can't Not Dance!"</i></p>
+    <p class="text">
+      High-energy, world-class musicianship meets pure dance-floor electricity. Santa Rios doesn’t
+      just play shows — they ignite them.
+    </p>
+    <p class="text"><i>“You Can’t Not Dance!”</i></p>
     <hr class="my-4" />
     <div class="flex flex-col justify-center d-flex lg:flex-row align-center">
-      <a href="Santa-Rios-Band-Bio.pdf" target="_blank" class="text-lg link whitespace-nowrap">
+      <a href="Santa%20Rios%20Short%20Bio%202026.pdf" target="_blank" class="text-lg link whitespace-nowrap">
         Band Bio
       </a>
       <span class="hidden mx-2 lg:flex">|</span>
@@ -66,8 +67,8 @@ const onLogoClick = async (logo: MediaAsset) => {
     </div>
     <hr class="my-4" />
     <img
-      src="@/assets/images/Band_BnW.jpg"
-      alt="Santa Rios Live"
+      src="@/assets/images/photos/Stargazers Cropped.jpg"
+      alt="Stargazers"
       class="block object-contain w-full max-w-6xl mx-auto"
     />
     <hr class="my-4" />
@@ -80,8 +81,6 @@ const onLogoClick = async (logo: MediaAsset) => {
         />
       </div>
       <div class="w-full lg:w-1/2">
-        <Posters :posters="posters" @poster-click="onPosterClick" />
-        <hr class="my-4" />
         <h3>Logos</h3>
         <div class="grid grid-cols-1 gap-4 mb-4 md:grid-cols-2">
           <button v-for="logo in logos" :key="logo.src" @click="onLogoClick(logo)" class="mx-auto">
